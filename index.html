@@ -1,0 +1,725 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Booknest</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='//cdn.jsdelivr.net/jquery.slick/1.5.0/slick.css'>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+
+    <!-- navbar starts from here -->
+    <div class="container d-md-block fun-header">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3">
+            <div class="col-md-3 mb-2 mb-md-0">
+                <a href="./index.html" class="d-inline-flex link-body-emphasis text-decoration-none">
+                    <img src="./assets/logo/Logo.png" alt="">
+                </a>
+            </div>
+
+            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="./index.html" class="nav-link px-2 text-dark active"><i class="fa-solid fa-house"></i>
+                        Home</a></li>
+                <li class="dropdown">
+                    <a class="nav-link text-dark dropdown-toggle" href="#" id="dropdownMenuButton"
+                        aria-expanded="false"> <i class="fa-solid fa-list"></i> Categories</a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+                        <li><a class="dropdown-item" href="./trending.html">Trending Books</a></li>
+                        <li><a class="dropdown-item" href="./bestsellers.html">Bestsellers to Motion Pictures</a></li>
+                        <li><a class="dropdown-item" href="./crime.html">Crime</a></li>
+                        <li><a class="dropdown-item" href="./fantacy.html">Fantacy</a></li>
+                        <li><a class="dropdown-item" href="./fiction.html">Fiction</a></li>
+                        
+                    </ul>
+                </li>
+                <li><a href="./myaccount.html" class="nav-link px-2 text-dark"><i class="fa-solid fa-user"></i> My
+                        Account</a></li>
+
+            </ul>
+
+            <!-- <div class="col-md-3 text-end search">
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                    <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+                </form>
+
+            </div> -->
+        </header>
+    </div>
+    <!-- mobile nav starts -->
+    <header class="d-md-none">
+        <div class="logo-center">
+            <a href="./index.html"><img src="./assets/logo/Logo.png" alt="Logo"></a>
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <span>&#9776;</span>
+        </div>
+        
+        <!-- <div class="search-icon" onclick="toggleSearch()">
+            <img src="./assets/logo/search.png" alt="Search" id="searchIcon">
+        </div> -->
+        <input type="text" id="searchInput" class="search-input" placeholder="Search...">
+    </header>
+    <nav id="mobile-nav" class="mobile-nav">
+        <div class="nav-header">
+            <div class="logo-left">
+                <a href="./index.html"><img src="./assets/logo/Logo.png" alt="Logo"></a>
+            </div>
+            <div class="close-icon" onclick="toggleMenu()">&times;</div>
+        </div>
+        <ul>
+            <li><a href="./index.html"><i class="fa-solid fa-house"></i>&nbsp; Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" onclick="toggleDropdown(event)"><i class="fa-solid fa-list"></i>&nbsp; Categories</a>
+                <ul class="dropdown-content mt-2">
+                    <li><a class="dropdown-item" href="./trending.html">&nbsp; Trending Books</a></li>
+                    <li><a class="dropdown-item" href="./bestsellers.html">&nbsp; Bestsellers to Motion Pictures</a></li>
+                    <li><a class="dropdown-item" href="./crime.html">&nbsp; Crime</a></li>
+                    <li><a class="dropdown-item" href="./fantacy.html">&nbsp; Fantasy</a></li>
+                    <li><a class="dropdown-item" href="./fiction.html">&nbsp; Fiction</a></li>
+                    
+                </ul>
+            </li>
+            <li><a href="./myaccount.html" class="nav-link"><i class="fa-solid fa-user"></i>&nbsp; My Account</a></li>
+        </ul>
+    </nav>
+    
+
+
+    <!-- navbar ends here -->
+
+    <!-- hero starts from here -->
+
+    <section>
+        <div class="container-fluid p-0">
+            <div class="slider center-item hero-slider d-md-block">
+                <div class="slide">
+                    <div class="cl"><a href="./mystery/mystery5.html"><img src="./assets/hero/Animal_Crush_new_Animal.png" class="img-fluid" alt=""></a></div>
+                </div>
+                <div class="slide">
+                    <div class="cl"><a href="./romance/romance17.html"><img src="./assets/hero/Bear_Chase_new_bear.png" class="img-fluid" alt=""></a></div>
+                </div>
+                <div class="slide">
+                    <div class="cl"><a href="./horror/horror2.html"><img src="./assets/hero/Billiards_new_billiards.jpg" class="img-fluid" alt=""></a></div>
+                </div>
+                <div class="slide">
+                    <div class="cl"><a href="./fiction/fiction17.html"><img src="./assets/hero/Blocker_new.png" class="img-fluid" alt=""></a></div>
+                </div>
+                <div class="slide">
+                    <div class="cl"><a href="./historic/historic17.html"><img src="./assets/hero/BrickOut.png" class="img-fluid" alt=""></a></div>
+                </div>
+                <div class="slide">
+                    <div class="cl"><a href="./best/best2.html"><img src="./assets/hero/BubbleShooter.jpeg" class="img-fluid" alt=""></a></div>
+                </div>
+            </div>
+            <div class="slider center hero-slider d-md-none">
+                <div class="slide">
+                    <div class="cl">
+                        <a href="./mystery/mystery5.html"><img src="./assets/hero/Animal_Crush_new_Animal.png" class="img-fluid" alt=""></a></div>
+                </div>
+                <div class="slide">
+                    <div class="cl"><a href="./historic/historic17.html"><img src="./assets/hero/Bear_Chase_new_bear.png" class="img-fluid" alt=""></a></div>
+                </div>
+                <div class="slide">
+                    <div class="cl"><a href="./fiction/fiction17.html"><img src="./assets/hero/Billiards_new_billiards.jpg" class="img-fluid" alt=""></a></div>
+                </div>
+                <div class="slide">
+                    <div class="cl"><a href="./horror/horror2.html"><img src="./assets/hero/Blocker_new.png" class="img-fluid" alt=""></a></div>
+                </div>
+                <div class="slide">
+                    <div class="cl"><a href="./romance/romance17.html"><img src="./assets/hero/BrickOut.png" class="img-fluid" alt=""></a></div>
+                </div>
+                <div class="slide">
+                    <div class="cl"><a href="./best/best2.html"><img src="./assets/hero/BubbleShooter.jpeg" class="img-fluid" alt=""></a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- hero ends here -->
+
+
+
+    <!-- categories starts -->
+    <!-- <section>
+
+        <div class="container mb-4 gap-top heading">
+            <h2>Your Categories</h2>
+            <div class="swiper mySwiper trending mt-4">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <a href="./crime.html">
+                            <img src="./assets/category/categories-1.png" class="img-fluid" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="./finance.html">
+                            <img src="./assets/category/categories-2.png" class="img-fluid" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="./mystery.html">
+                            <img src="./assets/category/categories-3.png" class="img-fluid" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="./phychology.html">
+                            <img src="./assets/category/categories-4.png" class="img-fluid" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="./non-fiction.html">
+                            <img src="./assets/category/categories-5.png" class="img-fluid" alt="">
+                        </a>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+
+
+    </section> -->
+    <!-- categories ends -->
+
+    <!-- trending starts -->
+    <section>
+
+        <div class="container mb-4 snaps-item heading mt-5">
+            <div class="trending-item">
+                <h2>Trending Books</h2>
+                <h3><a href="./trending.html">VIEW MORE</a></h3>
+            </div>
+            <p>Get the latest must-reads that everyone is talking about.</p>
+
+            <div class="swiper mySwiper trending mt-4">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="./trending/trending1.html">
+                            <img src="./assets/trending/supercowboy.png" class="img-fluid" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="./trending/trending2.html">
+                            <img src="./assets/trending/sweetmatch3.png" class="img-fluid" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="./trending/trending3.html">
+                            <img src="./assets/trending/tankdefender.png" class="img-fluid" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="./trending/trending4.html">
+                            <img src="./assets/trending/tetriscube.png" class="img-fluid" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="./trending/trending5.html">
+                            <img src="./assets/trending/thepuzzle.PNG" class="img-fluid" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="./trending/trending6.html">
+                            <img style="border: 2px solid #f0f0f0;" src="./assets/trending/trackracer.png"
+                                class="img-fluid" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <!-- trending ends -->
+    <!-- bestsellers starts -->
+    <section>
+
+        <div class="container mb-4 snaps-item heading mt-5">
+            <div class="trending-item">
+                <h2>Bestsellers to Motion Pictures</h2>
+                <h3><a href="./bestsellers.html">VIEW MORE</a></h3>
+            </div>
+            <p>Read these adaptations blending literary imagination with cinematic artistry.</p>
+
+            <div class="swiper mySwiper trending mt-4">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <a href="./best/best1.html">
+                            <img src="./assets/bestsellers/spacematch3.png" class="img-fluid" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="./best/best2.html">
+                            <img src="./assets/bestsellers/speedpurge.png" class="img-fluid" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="./best/best3.html">
+                            <img src="./assets/bestsellers/speedracer.png" class="img-fluid" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="./best/best4.html">
+                            <img src="./assets/bestsellers/squarerun.png" class="img-fluid" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="./best/best5.html">
+                            <img src="./assets/bestsellers/stickpanda.png" class="img-fluid" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="./best/best6.html">
+                            <img src="./assets/bestsellers/stickpin.png" class="img-fluid" alt="">
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </section>
+    <!-- bestsellers ends -->
+    <!-- romance starts -->
+    <section>
+
+        <div class="container mb-4 snaps-item heading mt-5">
+            <div class="trending-item">
+                <h2>Romance</h2>
+                <h3><a href="./romance.html">VIEW MORE</a></h3>
+            </div>
+            <p>Ignite passion and explore the depths of love, desire, and intimacy, celebrating the complexities of
+                relationships and the power of human connection.</p>
+
+            <div class="swiper mySwiper trending mt-4">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <a href="./romance/romance1.html">
+                            <img src="./assets/Romance/roadracer.png" class="img-fluid" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="./romance/romance2.html">
+                            <img src="./assets/Romance/robberrun.png" class="img-fluid" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="./romance/romance3.html">
+                            <img src="./assets/Romance/ropeninja.jpg" class="img-fluid" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="./romance/romance4.html">
+                            <img src="./assets/Romance/runvovanrun.png" class="img-fluid" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="./romance/romance5.html">
+                            <img src="./assets/Romance/scaryrun.png" class="img-fluid" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="./romance/romance6.html">
+                            <img src="./assets/Romance/snakeblast.png" class="img-fluid"
+                                alt="">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <!-- romance ends -->
+    <!-- Mystery starts -->
+    <section>
+
+        <div class="container mb-4 snaps-item heading mt-5">
+            <div class="trending-item">
+                <h2>Mystery</h2>
+                <h3><a href="./mystery.html">VIEW MORE</a></h3>
+            </div>
+            <p>Ignite passion and explore the depths of love, desire, and intimacy, celebrating the complexities of
+                relationships and the power of human connection.</p>
+
+            <div class="swiper mySwiper trending mt-4">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <a href="./mystery/mystery1.html">
+                            <img src="./assets/Mystery/minigolfworld.png" class="img-fluid" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="./mystery/mystery2.html">
+                            <img src="./assets/Mystery/miniracer.png" class="img-fluid" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="./mystery/mystery3.html">
+                            <img src="./assets/Mystery/monstermatch3.png" class="img-fluid" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="./mystery/mystery4.html">
+                            <img style="border: 2px solid #f0f0f0;"
+                                src="./assets/Mystery/ninjaclan.png" class="img-fluid" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="./mystery/mystery5.html">
+                            <img src="./assets/Mystery/ninjarun.png" class="img-fluid" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="./mystery/mystery6.html">
+                            <img src="./assets/Mystery/panicdrop.png" class="img-fluid" alt="">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <!-- Mystery ends -->
+    <!-- Fiction starts -->
+    <section>
+
+        <div class="container mb-4 snaps-item heading mt-5">
+            <div class="trending-item">
+                <h2>Fiction</h2>
+                <h3><a href="./fiction.html">VIEW MORE</a></h3>
+            </div>
+            <p>Dive into an imaginative worlds and captivating stories where anything is possible.</p>
+
+            <div class="swiper mySwiper trending mt-4">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <a href="./fiction/fiction1.html">
+                            <img src="./assets/Fiction/kidscoloringbook.png" class="img-fluid" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="./fiction/fiction2.html">
+                            <img src="./assets/Fiction/kidspuzzle.png" class="img-fluid" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="./fiction/fiction3.html">
+                            <img src="./assets/Fiction/knightinlove.png" class="img-fluid"
+                                alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="./fiction/fiction4.html">
+                            <img src="./assets/Fiction/legendofthesamurai.png" class="img-fluid" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="./fiction/fiction5.html">
+                            <img src="./assets/Fiction/letspark.png" class="img-fluid" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="./fiction/fiction6.html">
+                            <img src="./assets/Fiction/lifeline.png" class="img-fluid" alt="">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </section>
+    <!-- Fiction ends -->
+    
+
+
+    <div class="container">
+        <footer class="py-3 my-4 border-top">
+
+            <p class="text-center">Copyright 2024 Stellaads. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="./index.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const dropdownToggle = document.getElementById('dropdownMenuButton');
+            const dropdownMenu = dropdownToggle.nextElementSibling;
+
+            dropdownToggle.addEventListener('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const isVisible = dropdownMenu.style.display === 'block';
+                dropdownMenu.style.display = isVisible ? 'none' : 'block';
+            });
+
+            document.addEventListener('click', function () {
+                dropdownMenu.style.display = 'none';
+            });
+        });
+
+
+    </script>
+
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('mobile-nav');
+            if (nav.style.left === '0px') {
+                nav.style.left = '-100%';
+            } else {
+                nav.style.left = '0px';
+            }
+        }
+
+        function toggleDropdown(event) {
+    event.preventDefault();
+    
+    // Find the parent dropdown element
+    const dropdown = event.target.closest('.dropdown');
+    
+    // Find the dropdown content element within this dropdown
+    const dropdownContent = dropdown.querySelector('.dropdown-content');
+
+    // Toggle the 'open' class on the current dropdown content
+    dropdownContent.classList.toggle('open');
+
+    // Add a one-time event listener to the document to close the dropdown if clicking outside
+    document.addEventListener('click', function closeDropdown(e) {
+        // Check if the click is outside the dropdown
+        if (!dropdown.contains(e.target)) {
+            dropdownContent.classList.remove('open');
+            document.removeEventListener('click', closeDropdown);
+        }
+    }, { once: true });
+}
+
+
+
+
+
+
+        function toggleInnerDropdown(event) {
+            event.preventDefault();
+            const parent = event.target.parentElement;
+            parent.classList.toggle('open');
+        }
+
+
+    </script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='//cdn.jsdelivr.net/jquery.slick/1.5.0/slick.min.js'></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".categories").slick({
+                dots: false,
+                infinite: true,
+                speed: 1000,
+                slidesToShow: 5.5,
+                swipeToSlide: true, // Enables smooth swiping
+                touchThreshold: 20, // Adjusts touch sensitivity
+
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 6.5,
+                            slidesToScroll: 1,
+                            infinite: true,
+                            dots: false,
+                        },
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 4.5,
+                            slidesToScroll: 1,
+                            dots: false,
+                        },
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 4.5,
+                            slidesToScroll: 1,
+                            dots: false,
+                        },
+                    },
+                ],
+                prevArrow: false,
+                nextArrow: false,
+            });
+        });
+    </script>
+
+    <script>
+        function toggleSearch() {
+            var searchInput = document.getElementById('searchInput');
+            var searchIcon = document.getElementById('searchIcon');
+
+            if (searchInput.classList.contains('expanded')) {
+                searchInput.classList.remove('expanded');
+                searchIcon.classList.remove('hidden');
+            } else {
+                searchInput.classList.add('expanded');
+                searchIcon.classList.add('hidden');
+            }
+        }
+
+
+    </script>
+
+
+
+    <script>
+        var $st = $('.pagination');
+        var $slickEl = $('.center');
+
+        $slickEl.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+            var i = (currentSlide ? currentSlide : 0) + 1;
+            $st.text(i + ' of ' + slick.slideCount);
+        });
+
+        $slickEl.slick({
+            centerMode: true,
+            centerPadding: '200px',
+            slidesToShow: 5,
+            focusOnSelect: true,
+            arrows: false,
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 1500,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '120px',
+                        slidesToShow: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '120px',
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+
+    </script>
+
+
+    <script>
+        var $st = $('.pagination');
+        var $slickEl = $('.center-item');
+
+        $slickEl.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+            var i = (currentSlide ? currentSlide : 0) + 1;
+            $st.text(i + ' of ' + slick.slideCount);
+        });
+
+        $slickEl.slick({
+            centerMode: true,
+            centerPadding: '10px',
+            slidesToShow: 5,
+            focusOnSelect: true,
+            arrows: false,
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 1500,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '120px',
+                        slidesToShow: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '120px',
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+
+    </script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper('.mySwiper', {
+            centeredSlides: true,
+            loop: true,
+            spaceBetween: 10,
+            slidesPerView: 3.5, // Default for larger screens
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                // when window width is <= 768px (tablet/phone)
+                768: {
+                    slidesPerView: 4.5, // Show 2.5 slides on tablets
+                },
+                // when window width is <= 480px (mobile)
+                480: {
+                    slidesPerView: 3.5, // Show 1.5 slides on mobile
+                },
+            }
+        });
+    </script>
+    
+
+</body>
+
+</html>
